@@ -250,11 +250,26 @@ tests/
 
 ---
 
-## License
+## License & Upstream Compatibility
 
-**[GNU AGPL-3.0](LICENSE)** — strong copyleft. You can use, modify, and run this commercially, **but any derivative work — including network-accessible services (SaaS) — must also be released under AGPL-3.0 with full source available to its users.**
+**This project: [GNU AGPL-3.0-or-later](LICENSE)** — strong copyleft. You can use, modify, and run it commercially, **but any derivative work — including network-accessible services (SaaS) — must also be released under AGPL-3.0 with full source available to its users.**
 
 This is a deliberate choice: trading-bot tooling tends to drift behind closed doors. AGPL keeps improvements in the commons.
+
+### Compatibility with Freqtrade (GPL-3.0)
+
+[Freqtrade](https://github.com/freqtrade/freqtrade) — the trading framework this project sits on top of — is licensed under **GPL-3.0**.
+
+| Component | License obligation | Why |
+|---|---|---|
+| `freqtrade_mcp/*.py` (this project's main code) | AGPL-3.0 | Communicates with Freqtrade only over HTTP REST and ccxt-direct fetches — "arm's length" interop, not a derivative work under GPL. We choose AGPL freely. |
+| `examples/freqtrade/MetaStrategy.py` | AGPL-3.0 (compatible with the GPL-3.0 it inherits) | Subclasses `freqtrade.strategy.IStrategy` and imports `freqtrade.persistence.Trade`, so it IS a derivative work of Freqtrade and inherits GPL-3.0 obligations. AGPL-3.0 is explicitly upward-compatible with GPL-3.0 (GPL §13 + AGPL §13), so distributing this file under AGPL-3.0 satisfies both. |
+
+In plain English: **GPL-3.0 code can be combined with AGPL-3.0 code**, the combined work goes out under AGPL-3.0, and Freqtrade's authors are credited. The GNU project itself sanctions this combination — see GPL-3.0 §13:
+
+> Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work.
+
+See **[NOTICE](NOTICE)** for the full attribution list (Freqtrade, ccxt, MCP SDK, pandas, NumPy, httpx, pydantic, Typer, Rich, python-dotenv).
 
 ---
 

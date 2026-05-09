@@ -19,6 +19,26 @@ Responsibilities:
 
 NOTE: This file is part of the trust boundary. The LLM never edits this file
 directly. Only humans (you) and curated tooling change it.
+
+------------------------------------------------------------------------
+LICENSE NOTICE
+
+This file is a derivative work of the Freqtrade project
+(https://github.com/freqtrade/freqtrade), which is licensed under
+GNU GPL-3.0-or-later. By subclassing freqtrade.strategy.IStrategy and
+importing freqtrade.persistence.Trade, this module incorporates GPL-3.0
+covered code and must therefore itself be distributed under GPL-3.0
+or a compatible license.
+
+The freqtrade-mcp project as a whole is distributed under
+GNU AGPL-3.0-or-later, which is explicitly compatible with GPL-3.0
+(see GPL-3.0 §13 and AGPL-3.0 §13). Recipients of this file therefore
+receive it under the AGPL-3.0 terms while the GPL-3.0 obligations
+toward the upstream Freqtrade authors are simultaneously honored.
+
+Copyright notice for the upstream interface this file inherits from:
+    Freqtrade contributors — https://github.com/freqtrade/freqtrade
+------------------------------------------------------------------------
 """
 
 # pragma pylint: disable=missing-docstring, invalid-name

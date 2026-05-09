@@ -1,0 +1,85 @@
+freqtrade-mcp
+Copyright (C) 2026 FaFengFei1961
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version. See the LICENSE file for the full text.
+
+================================================================================
+THIRD-PARTY SOFTWARE NOTICES AND ATTRIBUTIONS
+================================================================================
+
+This project depends on, and is designed to operate alongside, the following
+free software components.  The user is responsible for installing each of
+these separately.  No third-party source code is bundled inside this
+repository — they are listed here for transparency and to honor their
+respective license obligations.
+
+--------------------------------------------------------------------------------
+1. Freqtrade  (https://github.com/freqtrade/freqtrade)
+   Free, open-source crypto trading bot.
+   License: GNU GPL-3.0-or-later
+   Copyright: Freqtrade contributors
+
+   freqtrade-mcp interoperates with Freqtrade primarily over the network
+   (HTTP REST and stdio file-share via Docker volume), which is generally
+   considered "arm's length" communication and does not by itself create a
+   derivative work under GPL.
+
+   The single exception is examples/freqtrade/MetaStrategy.py, which
+   subclasses freqtrade.strategy.IStrategy and is therefore a derivative
+   work of Freqtrade.  That file is distributed under AGPL-3.0, which is
+   explicitly compatible with GPL-3.0 (GPL-3.0 §13 + AGPL-3.0 §13).
+
+--------------------------------------------------------------------------------
+2. ccxt  (https://github.com/ccxt/ccxt)
+   Cryptocurrency trading API library for Python / JavaScript / PHP.
+   License: MIT
+   Copyright: ccxt contributors
+
+--------------------------------------------------------------------------------
+3. Model Context Protocol Python SDK  (https://github.com/modelcontextprotocol/python-sdk)
+   Reference Python implementation of MCP.
+   License: MIT
+   Copyright: Anthropic, PBC
+
+--------------------------------------------------------------------------------
+4. pandas  (https://github.com/pandas-dev/pandas)
+   License: BSD-3-Clause
+   Copyright: AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team
+
+--------------------------------------------------------------------------------
+5. NumPy  (https://github.com/numpy/numpy)
+   License: BSD-3-Clause
+   Copyright: NumPy Developers
+
+--------------------------------------------------------------------------------
+6. httpx  (https://github.com/encode/httpx)
+   License: BSD-3-Clause
+   Copyright: Encode OSS Ltd.
+
+--------------------------------------------------------------------------------
+7. pydantic  /  pydantic-settings  (https://github.com/pydantic/pydantic)
+   License: MIT
+   Copyright: Samuel Colvin and other contributors
+
+--------------------------------------------------------------------------------
+8. Typer  (https://github.com/fastapi/typer)
+   License: MIT
+   Copyright: Sebastián Ramírez
+
+--------------------------------------------------------------------------------
+9. Rich  (https://github.com/Textualize/rich)
+   License: MIT
+   Copyright: Will McGugan
+
+--------------------------------------------------------------------------------
+10. python-dotenv  (https://github.com/theskumar/python-dotenv)
+    License: BSD-3-Clause
+    Copyright: Saurabh Kumar
+
+--------------------------------------------------------------------------------
+
+If you redistribute or modify freqtrade-mcp, please preserve this NOTICE file.
+For the precise license text of each upstream project, follow the URLs above.
