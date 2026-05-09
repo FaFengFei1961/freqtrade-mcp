@@ -1,0 +1,11 @@
+{
+  "_comment": "Drop this in your Freqtrade project root as .mcp.json (Claude Code project-level MCP config). Adjust the absolute path to point at your local freqtrade-mcp install.",
+  "mcpServers": {
+    "freqtrade": {
+      "type": "stdio",
+      "command": "/ABSOLUTE/PATH/TO/freqtrade-mcp/.venv/bin/freqtrade-mcp",
+      "args": [],
+      "env": {}
+    }
+  }
+}

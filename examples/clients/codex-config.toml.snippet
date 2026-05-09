@@ -1,0 +1,12 @@
+# Append this block to your Codex CLI / desktop config:
+#   ~/.codex/config.toml      (Linux/macOS)
+#   %USERPROFILE%\.codex\config.toml  (Windows)
+#
+# Adjust the absolute path to point at your local freqtrade-mcp install.
+
+[mcp_servers.freqtrade]
+type = "stdio"
+command = "/ABSOLUTE/PATH/TO/freqtrade-mcp/.venv/bin/freqtrade-mcp"
+args = []
+
+[mcp_servers.freqtrade.env]
